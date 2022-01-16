@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+:root {
+  --primary-color: #1c1d1f;
+  --background-color: whitesmoke;
+}
+
+[data-theme="dark"] {
+  --primary-color: whitesmoke;
+  --background-color: #1c1d1f;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Mochiy Pop P One', sans-serif;
+  margin: 100px 0 0 0;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+
+h1 {
+  margin: 25px 0px;
+  text-align: center;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  letter-spacing: 4px;
+}
+
+.theme-switch-wrapper {
+  position: absolute;
+  right: 25px;
+  top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.theme-switch-wrapper span {
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.toggle-text {
+  position: relative;
+  top: -4px;
+  right: 5px;
+  color: var(--primary-color);
+}
+
+.theme-switch {
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.slider::before {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  bottom: 4px;
+  height: 26px;
+  left: 4px;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider::before {
+  transform: translate(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
+
+.fas {
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.loader img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Image-Container */
+.image-container {
+  margin: 10px 30%;
+}
+
+.image-container img {
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* media Query: Larger Smartphone */
+
+@media screen and (max-width: 600px) {
+  .image-container {
+    margin: 10px 10px;
+  }
+}
