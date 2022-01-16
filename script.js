@@ -73,7 +73,6 @@ getPhotos();
 
 // handle switch Dark Mode
 const switchTheme = (e) => {
-    console.log(e.target);
     if (e.target.checked) {
         document.documentElement.setAttribute("data-theme", "dark")
         toggleText.children[0].textContent = "Dark Mode"
